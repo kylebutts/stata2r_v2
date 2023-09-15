@@ -7,6 +7,10 @@ import tailwind from "@astrojs/tailwind"
 export default defineConfig({
   site: 'https://kylebutts.github.io',
   base: '/stata2r_v2',
+  redirects: {
+    '/data.table': '/data_table'
+  },
+  outDir: 'docs',
 	integrations: [
 		starlight({
 			title: "stata2R",
@@ -24,15 +28,15 @@ export default defineConfig({
 						},
 						{
 							label: "data.table",
-							link: "/guides/data_table/",
+							link: "/data_table/",
 						},
 						{
 							label: "fixest",
-							link: "/guides/fixest/",
+							link: "/fixest/",
 						},
 						{
 							label: "extras",
-							link: "/guides/extras/",
+							link: "/extras/",
 						},
 					],
 				},
