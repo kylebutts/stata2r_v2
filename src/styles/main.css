@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --sl-content-width: 65rem;
+}
+
+footer {
+  display: none;
+}
