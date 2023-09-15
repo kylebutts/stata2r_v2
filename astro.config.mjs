@@ -10,7 +10,7 @@ export default defineConfig({
   redirects: {
     '/data.table': '/data_table'
   },
-  outDir: 'docs',
+  // outDir: 'docs',
 	integrations: [
 		starlight({
 			title: "stata2R",
