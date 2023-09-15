@@ -3,9 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --sl-content-width: 65rem;
+	--sl-content-width: 70rem;
+	--sl-sidebar-width: 12rem;
 }
-
+@media (min-width: 72rem) {
+	.right-sidebar-container {
+    min-width: 12rem;
+	}
+}
 footer {
-  display: none;
+	display: none;
 }
