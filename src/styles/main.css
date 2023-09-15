@@ -4,11 +4,11 @@
 
 :root {
 	--sl-content-width: 70rem;
-	--sl-sidebar-width: 12rem;
+	--sl-sidebar-width: 14rem;
 }
 @media (min-width: 72rem) {
 	.right-sidebar-container {
-    min-width: 12rem;
+    min-width: var(--sl-sidebar-width);
 	}
 }
 footer {
