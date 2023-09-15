@@ -1555,26 +1555,16 @@ of).
 
 #### Merge on different ID names 
 
-<div class='code--container grid grid-row grid-cols-1 gap-y-2 lg:gap-y-0 lg:grid-cols-2 lg:gap-x-2 [&>*]:!mt-0 grid-cols-1'>
-<div>
-
 ```r
 mdat = merge(dat, dat2, by.x='dest', by.y='faa') 
 ```
-</div>
-</div>
 
 #### Set keys for even faster merges and syntax shortcuts 
-
-<div class='code--container grid grid-row grid-cols-1 gap-y-2 lg:gap-y-0 lg:grid-cols-2 lg:gap-x-2 [&>*]:!mt-0 grid-cols-1'>
-<div>
 
 ```r
 setkey(dat, dest); setkey(dat2, dest) 
 mdat = merge(dat, dat2) ## note: don't need 'by' 
 ```
-</div>
-</div>
 
 #### Non-equi joins
 
@@ -1583,9 +1573,6 @@ But they are incredibly powerful and solve a surprisingly common problem:
 Merging datasets over a range (e.g. start to end dates), rather than exact
 matches. Here's a simple example where we want to subset the 1st quarter flights
 for American Airlines and the 2nd quarter flights for United Airlines:
-
-<div class='code--container grid grid-row grid-cols-1 gap-y-2 lg:gap-y-0 lg:grid-cols-2 lg:gap-x-2 [&>*]:!mt-0 grid-cols-1'>
-<div>
 
 ```r
 # The things we want to match on. Note the different start and
@@ -1600,8 +1587,6 @@ dat[dat3, on = .(carrier,
                  month >= start_month,
                  month <= end_month)] 
 ```
-</div>
-</div>
 
 #### Rolling Joins
 
@@ -1609,9 +1594,6 @@ Rolling joins are similar and allow you to match a set of dates forwards or
 backwards. For example, our `dat`  dataset ends in October. Let's say we want to
 carry the last known entries for American and United Airlines  forward to
 (random) future dates.
-
-<div class='code--container grid grid-row grid-cols-1 gap-y-2 lg:gap-y-0 lg:grid-cols-2 lg:gap-x-2 [&>*]:!mt-0 grid-cols-1'>
-<div>
 
 ```r
 # Make sure we have a date variable
@@ -1624,5 +1606,3 @@ dat4 = data.table(carrier  = c('AA', 'UA'),
 # Join on these target dates, so they take the last known value 
 dat[dat4, on = .(carrier, date=new_date), roll='nearest']
 ```
-</div>
-</div>
