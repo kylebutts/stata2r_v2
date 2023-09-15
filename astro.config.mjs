@@ -5,6 +5,8 @@ import tailwind from "@astrojs/tailwind"
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://kylebutts.github.io',
+  base: '/stata2r_v2',
 	integrations: [
 		starlight({
 			title: "stata2R",
